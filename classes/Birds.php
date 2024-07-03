@@ -1,5 +1,5 @@
 <?php 
 
-class Fish {
+class Birds {
     private $icon;
 }
