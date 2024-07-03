@@ -2,16 +2,20 @@
 
 class Product {
     private $name;
-    private $type;
     private $target;
     private $price;
     private $imgURL;
+    public static $instances = [];
     
-    public function __construct($name, $type, $target, $price, $imgURL){
+    public function __construct($name, $target, $price, $imgURL){
         $this->name = $name;
-        $this->type = $type;
         $this->target = $target;
         $this->price = $price;
         $this->imgURL = $imgURL;
+        self::$instances[] = $this;
+    }
+
+    public static function all() {
+        return self::$instances;
     }
 }
