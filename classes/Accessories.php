@@ -2,10 +2,6 @@
 require_once __DIR__ . '/Product.php';
 
 class Accessories extends Product {
-    private $name;
-    private $target;
-    private $price;
-    private $imgURL;
     private $material;
     private $size;
 
@@ -13,5 +9,13 @@ class Accessories extends Product {
         parent::__construct($name, $target, $price, $imgURL);
         $this->material = $material;
         $this->size = $size;
+    }
+
+    public function GetMaterial(){
+        return $this->material;
+    }
+
+    public function GetSize(){
+        return $this->size;
     }
 }

@@ -33,7 +33,7 @@ require_once __DIR__ . '/db/ProductList.php';
     <title>Boolshop</title>
 </head>
 <body>
-    <header>
+    <header class="p-4">
         <h1>
             Boolshop
         </h1>
@@ -41,11 +41,31 @@ require_once __DIR__ . '/db/ProductList.php';
 
     <main class="container">
         <h2>I nostri prodotti:</h2>
-        <section class="main-content">
-            <?php  ?>
-            <article class="card">
+        <section class="main-content row p-5 mx-auto">
+            <?php foreach($allProducts as $product) {?>
+                <article class="card col-3 m-2">
+                    <img src="<?php echo $product->GetImgURL() ?>" class="card-img-top" alt="foto prodotto">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $product->GetName() ?></h5>
+                        <p class="card-text"><?php echo $product->GetTarget() ?></p>
+                        <p class="card-text"> € <?php echo $product->GetPrice() ?></p>
 
-            </article>
+                        <?php if(get_class($product) == 'Food') {?>
+                            <p class="card-text">Peso netto: <?php echo $product->GetWeight() ?></p>
+                            <p class="card-text">Ingredienti: <?php echo $product->GetIngredients() ?></p>
+                        <?php } else if (get_class($product) == 'Toy') {?>
+                            <p class="card-text">Caratteristiche: <?php echo $product->GetDescription() ?></p>
+                            <p class="card-text">Dimensioni: <?php echo $product->GetSize() ?></p>
+                        <?php } else if (get_class($product) == 'Accessories') {?>
+                            <p class="card-text">Materiale: <?php echo $product->GetMaterial() ?></p>
+                            <p class="card-text">Dimensioni: <?php echo $product->GetSize() ?></p>
+                        <?php } ?>
+                    </div>
+
+
+                    
+                </article>
+                <?php } ?>
         </section>
     </main>
 </body>
