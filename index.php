@@ -1,46 +1,42 @@
-<!-- > Oggi pomeriggio provate ad immaginare quali sono le classi necessarie per creare uno shop online con le seguenti caratteristiche:
-> L'e-commerce vende prodotti per gli animali.
-> I prodotti saranno:
-
-    cibo
-    giochi
-    accessori (cucce, guinzagli, lettiere, acquari, etc).
-> I prodotti possono appartenere a una tra queste categorie:
-
-    Cane,
-    Gatto,
-    Uccelli,
-    Pesci
-> Una volta create le classi che descrivono il nostro sistema:
-> - instanziate prima tutte le categorie che ci serviranno,
+<!-- > 
 > - poi create alcuni prodotti appartenenti a differenti categorie 
 > - e stampate delle card contenenti i dettagli dei prodotti, come immagine, titolo, prezzo, icona della categoria ed il tipo di 
-articolo che si sta visualizzando (prodotto, cibo, gioco, accessorio).BONUS:
+articolo che si sta visualizzando (prodotto, cibo, gioco, accessorio).
+
+BONUS:
 > Definite una proprietà privata ed un metodo privato all'interno di una classe, assegnategli un valore e mostratelo nelle card 
 (ricordatevi dell'esempio del codice prodotto visto a lezione).
 
 
-> Ecco le informazioni sui prodotti da mostrare:
-Royal Canin Mini Adult
-https://arcaplanet.vtexassets.com/arquivos/ids/300306/Royal-Canin-Mini-Adult-Alimento-Completo-per-Cani-Adulti-di-Piccola-Taglia-10120604-1.jpg
 
-Almo Nature Holistic Maintenance Medium Large Tonno e Riso
-https://arcaplanet.vtexassets.com/arquivos/ids/300514/Almo-Nature-Holistic-Maintenance-Medium-Large-Tonno-e-Riso-10118806.jpg
+<?php
+require_once __DIR__ . '/classes/Product.php';
+require_once __DIR__ . '/classes/Food.php';
+require_once __DIR__ . '/classes/Toy.php';
+require_once __DIR__ . '/classes/Accessories.php';
+require_once __DIR__ . '/classes/Cat.php';
+require_once __DIR__ . '/classes/Dog.php';
+require_once __DIR__ . '/classes/Fish.php';
+require_once __DIR__ . '/classes/Birds.php';
+require_once __DIR__ . '/db/ProductList.php';
 
-Almo Nature Cat Daily Lattina
-https://arcaplanet.vtexassets.com/arquivos/ids/245336/almo-daily-menu-cat-400-gr-vitello.jpg
 
-Mangime per Pesci Guppy in Fiocchi
-https://arcaplanet.vtexassets.com/arquivos/ids/272714/tetra-guppy-mini-flakes.jpg
 
-Voliera Wilma in Legno
-https://arcaplanet.vtexassets.com/arquivos/ids/258384/voliera-wilma1.jpg
+?>
 
-Cartucce Filtranti per Filtro EasyCrystal
-https://arcaplanet.vtexassets.com/arquivos/ids/272741/tetra-easycrystal-filterpack-250-300.jpg
 
-Kong Classic
-https://arcaplanet.vtexassets.com/arquivos/ids/256599/kong-classic1.jpg
 
-Topini di peluche Trixie
-https://arcaplanet.vtexassets.com/arquivos/ids/223852/trixie-gatto-gioco-active-mouse-peluche.jpg -->
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fontawesome 6.5.2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Boolshop</title>
+</head>
+<body>
+    
+</body>
+</html>
